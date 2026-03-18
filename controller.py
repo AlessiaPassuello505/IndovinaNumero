@@ -36,10 +36,10 @@ class Controller(object):
 
         res=self._model.play(tnt)
         if res==0:
-            self._view._lvOut.controls.append(ft.Text(f"Hai vinto! Il valore corretto era: {tnt},color=green"))
+            self._view._lvOut.controls.append(ft.Text(f"Hai vinto! Il valore corretto era: {tnt}",color="green"))
 
         elif res==2:
-            self._view._lvOut.controls.append(ft.Text(f"Hai perso! Il valore corretto era: {self._model._segreto}"))
+            self._view._lvOut.controls.append(ft.Text(f"Hai perso! Il valore corretto era: {self._model._segreto}",color="red"))
             self._view.update()
 
         elif res==-1:
@@ -47,7 +47,7 @@ class Controller(object):
             self._view.update()
 
         else:
-            self._view._lvOut.controls.append(ft.Text(f"Riprovare! il segreto è più grende di {tnt}"))
+            self._view._lvOut.controls.append(ft.Text(f"Riprovare! il segreto è più grande di {tnt}"))
             self._view.update()
 
 

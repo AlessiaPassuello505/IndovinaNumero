@@ -27,9 +27,7 @@ class View(object):
         self._row1=ft.Row(controls=[self._txtNmax,self._btnreset])
         self._row2=ft.Row(controls=[self._txtT,self._txtTmax])
         self._row3=ft.Row(controls=[self._txtInterattivo,self._btngioca])
-        self._page.add(self._row1,self._row2,self._row3)
-
-
+        self._page.add(self._row1,self._row2,self._row3,self._lvOut)
 
         self._page.update()          #aggiorna la mia pagina
 
